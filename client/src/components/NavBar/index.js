@@ -9,8 +9,13 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
+  //   title: {
+  //     flexGrow: 1,
+  //   },
+  subTitle: {
+    float: "right",
+    marginLeft: "20px",
+    marginTop: "4px",
   },
 }));
 
@@ -24,6 +29,9 @@ export default function NavBar() {
           <Typography variant="h6" className={classes.title}>
             Google Books
           </Typography>
+
+          <Typography className={classes.subTitle}>Search</Typography>
+          <Typography className={classes.subTitle}>Saved</Typography>
         </Toolbar>
       </AppBar>
     </div>
