@@ -1,26 +1,41 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import { Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
-    maxWidth: 500,
-    alignContent: "center",
+    display: "flex",
+    flexWrap: "wrap",
+    "& > *": {
+      margin: theme.spacing(3),
+      width: "100%",
+      height: theme.spacing(16),
+      alignContent: "center",
+    },
   },
-});
+}));
+
+// const useStyles = makeStyles({
+//   root: {
+//     width: "100%",
+//     maxWidth: 500,
+//     alignContent: "center",
+//   },
+// });
 
 export default function Header() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Typography variant="h4" gutterBottom>
-        (React) Google Books Search
-      </Typography>
-      <Typography variant="h6" gutterBottom>
-        Search for and Save Books of Interest
-      </Typography>
+      <Paper elevation={3}>
+        <Typography variant="h4" gutterBottom>
+          (React) Google Books Search
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          Search for and Save Books of Interest
+        </Typography>
+      </Paper>
     </div>
   );
 }
