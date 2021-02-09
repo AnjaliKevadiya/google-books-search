@@ -9,26 +9,21 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(3),
       width: "100%",
-      height: theme.spacing(16),
-      alignContent: "center",
+      height: theme.spacing(11),
     },
   },
+  paper: {
+    padding: "20px",
+    textAlign: "center",
+  },
 }));
-
-// const useStyles = makeStyles({
-//   root: {
-//     width: "100%",
-//     maxWidth: 500,
-//     alignContent: "center",
-//   },
-// });
 
 export default function Header() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Paper elevation={3}>
+      <Paper elevation={3} className={classes.paper}>
         <Typography variant="h4" gutterBottom>
           (React) Google Books Search
         </Typography>
