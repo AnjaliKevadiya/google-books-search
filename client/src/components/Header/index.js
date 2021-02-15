@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import SearchBar from "../SearchBar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(3),
       width: "100%",
-      height: theme.spacing(11),
+      height: theme.spacing(18),
     },
   },
   paper: {
@@ -30,6 +31,7 @@ export default function Header() {
         <Typography variant="h6" gutterBottom>
           Search for and Save Books of Interest
         </Typography>
+        <SearchBar />
       </Paper>
     </div>
   );
