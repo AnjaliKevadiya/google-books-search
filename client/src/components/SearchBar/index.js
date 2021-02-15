@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
-import SaveIcon from "@material-ui/icons/Save";
+import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: "30ch",
     },
+  },
+  textfield: {
+    height: "20px",
   },
   button: {
     margin: theme.spacing(1),
@@ -25,13 +28,14 @@ function SearchBar() {
         id="outlined-basic"
         label="Search for book"
         variant="outlined"
+        className={classes.textfield}
       />
       <Button
         variant="contained"
         color="primary"
         size="large"
         className={classes.button}
-        startIcon={<SaveIcon />}
+        startIcon={<SearchIcon />}
       >
         Search
       </Button>
