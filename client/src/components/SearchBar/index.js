@@ -23,7 +23,6 @@ function SearchBar() {
 
   return (
     <div>
-      {/* <form className={classes.root} noValidate autoComplete="off"> */}
       <TextField
         id="outlined-basic"
         label="Search for book"
